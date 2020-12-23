@@ -9,6 +9,7 @@ const GET_MOVIES = gql`
     movies {
         id
         medium_cover_image
+        isLiked @client
     }
 }
 `;
@@ -59,6 +60,7 @@ const Movies = styled.div`
 
 export default () => {
     const { loading, data } = useQuery(GET_MOVIES)
+    console.log(data)
     return (
         <Container>
             <Header>

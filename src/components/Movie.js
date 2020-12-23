@@ -31,6 +31,7 @@ export default ({ id, bg, isLiked }) => {
   const [toggleMovie] = useMutation(LIKE_MOVIE, {
     variables: { id: parseInt(id), isLiked }
   });
+  console.log(isLiked)
   return (
     <Container>
       <Link to={`/${id}`}>
